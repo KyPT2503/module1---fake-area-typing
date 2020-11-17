@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<textarea name="textarea" id="textarea" cols="30" rows="10" oninput="alterText()"></textarea>
+<script>
+    let index=0;
+    let str='I LOVE YOU !!!';
+    function alterText()
+    {
+        if(index>=str.length)
+        {
+            document.getElementById('textarea').value='';
+            index=0;
+        }
+        else
+        {
+            document.getElementById('textarea').value='';
+            document.getElementById('textarea').value=str.substring(0,index+1);
+            console.log(document.getElementById('textarea').value);
+            index+=1;
+        }
+    }
+</script>
+</body>
+</html>
